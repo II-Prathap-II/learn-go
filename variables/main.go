@@ -15,7 +15,7 @@ func main() {
 
 	var unInitNum = 5
 	fmt.Println("unInitNum", unInitNum)
-	// unInitNum = 4.3
+	// unInitNum = 4.3;
 
 	// the walrus operator can be used to assign a variable without specifying its type and without using var keyword
 	// note the this can be used only inside the methods and not outside it.
