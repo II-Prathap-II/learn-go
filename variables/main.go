@@ -21,8 +21,8 @@ func main() {
 	// note the this can be used only inside the methods and not outside it.
 	// the compiler would throw an error. Try to uncomment line 5 to check.
 
-	randomString := "fassfga"
-	fmt.Println("randomString", randomString)
+	rrandomString := "fassfga"
+	fmt.Println("randomString", rrandomString)
 
 	fmt.Println("RandomGlobal", RandomGlobal)
 
