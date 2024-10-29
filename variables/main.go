@@ -23,7 +23,34 @@ func main() {
 
 	rrandomString := "fassfga"
 	fmt.Println("randomString", rrandomString)
-
 	fmt.Println("RandomGlobal", RandomGlobal)
+
+	// note that the short variable declaration doesn't work for assignment of an old variable
+	// the compiler would throw an error. Try to uncomment line 30 to check.
+
+	//rrandomString := "aasfdf"
+
+	// assigning multiple variables of same time can be done with a single assingnment opertor. look line 36
+	// swapping variable values can be done with assignment operator ('='). Look at line 38.
+
+	var i, j int = 5, 10
+	fmt.Println(i, j)
+	j, i = i, j
+	fmt.Println(i, j)
+
+	// when assigning multiple values with short declaration operator,
+	// atleast one of the variable on the LHS, should be a new variable
+	// the compiler would throw an error. Try to uncomment line 47 to check.
+
+	z, i := 15, 20
+	fmt.Println(z, i)
+	//i,z := 20,15;
+
+	// Pointers are the address at which the variables are stored.
+	// To get the pointer of a variable use &z. This returns type *int (pointer to int) - because z is a pointer here.
+
+	point := &z
+	fmt.Println(*point)
+	fmt.Println(point == &z)
 
 }
