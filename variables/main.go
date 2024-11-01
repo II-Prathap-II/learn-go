@@ -35,7 +35,7 @@ func main() {
 
 	var i, j int = 5, 10
 	fmt.Println(i, j)
-	j, i = i, j
+	j, i = i, j // this is called Tuple assignment
 	fmt.Println(i, j)
 
 	// when assigning multiple values with short declaration operator,
@@ -52,5 +52,24 @@ func main() {
 	point := &z
 	fmt.Println(*point)
 	fmt.Println(point == &z)
+
+	// new function to create an unnamed variable of any type.
+	// returns *type - returns the address at which the variable lives
+	// its value can be obtains by points to operator - check line 62
+
+	unnamed := new(int)
+	fmt.Println(unnamed)
+	fmt.Println(*unnamed)
+
+	arr := []string{"gold", "silver", "bronze"}
+	fmt.Println(arr[0])
+	fmt.Println(arr[1])
+	fmt.Println(arr[2])
+	arr[2] = "Pithalai"
+	fmt.Println(arr[2])
+	//arr[1] = 4            - for assignability : types on both sides should match
+	// if(arr[0] != 3) {    - for comparability : types on both sides should match
+	// 	arr[2] = "gold"
+	// }
 
 }
