@@ -5,6 +5,9 @@ import "fmt"
 //RandomGlobal := "random";
 var RandomGlobal = "random" // Convention is that Capitalized variable name denotes it is a public variable.
 
+//rune = int32
+//byte = uint8 - signifies a piece of raw data
+
 func main() {
 	var number int = 4
 	fmt.Println("number is", number)
@@ -71,5 +74,16 @@ func main() {
 	// if(arr[0] != 3) {    - for comparability : types on both sides should match
 	// 	arr[2] = "gold"
 	// }
+
+	// If the result of an arithmetic operation, whether signed or unsigned,has more bits than can be
+	// represented in the result type, it is said to overflow. The high-order bits that do not fit are
+	// silently discarded.
+	// If the original number is asigned type, the result could be negative if the
+	// leftmost bit is a 1, as in the int8 example here:
+
+	var unsignedInt uint8 = 255
+	fmt.Println(unsignedInt, unsignedInt+1, unsignedInt*unsignedInt) // "255 0 1"
+	var signedInt int8 = 127
+	fmt.Println(signedInt, signedInt+1, signedInt*signedInt) // "127 -128 1
 
 }
